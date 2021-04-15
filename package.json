@@ -1,0 +1,27 @@
+{
+    "name": "filterspirit",
+    "displayName": "FilterSpiritSyntax",
+    "description": "Support for filter_spirit syntax",
+    "version": "0.0.1",
+    "author": "Alekhoff",
+	"publisher": "Alekhoff",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "filterspirit",
+            "aliases": ["Filterspirit", "filterspirit"],
+            "extensions": [".filterspirit"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "filterspirit",
+            "scopeName": "source.filterspirit",
+            "path": "./syntaxes/filterspirit.tmLanguage.json"
+        }]
+    }
+}

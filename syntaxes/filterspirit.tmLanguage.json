@@ -1,0 +1,86 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Filterspirit",
+	"patterns": [{
+		"include": "#operator"
+	},
+	{
+		"include": "#number"
+	},
+	{
+		"include": "#influences"
+	},
+	{
+		"include": "#color"
+	},
+	{
+		"include": "#keywords"
+	},
+	{
+		"include": "#attribute"
+	},
+	{
+		"include": "#strings"
+	},
+	{
+		"include": "#comment-line"
+	}
+],
+"repository": {
+	"operator": {
+		"patterns": [{
+			"name": "keyword",
+			"match": "(=|<|>)"
+		}]
+	},
+	"number": {
+		"patterns": [{
+			"name": "entity.name.function",
+			"match": "(1|2|3|4|5|6|7|8|9|0|Rare|Unique|Normal|Magic|RGB|Maps)"
+		}]
+	},
+	"influences": {
+		"patterns": [{
+			"name": "entity.name.function",
+			"match": "\\b(Shaper|Elder|Hunter|Warlord|Crusader|Redeemer)\\b"
+		}]
+	},
+	"color": {
+		"patterns": [{
+			"name": "constant.numeric",
+			"match": "\\b(Red|Green|Blue|Brown|White|Yellow|Circle|Grey|Pink|Cyan|Purple|Orange|Diamond|Hexagon|Square|Star|Triangle|Kite|Cross|Pentagon|Moon|Raindrop|UpsideDownHouse|Temp|Phantasmal|Anomalous|Divergent|Superior)\\b"
+		}]
+	},
+	"keywords": {
+		"patterns": [{
+			"name": "keyword",
+			"match": "\\b(Show|Hide|ShowHide|ShowDiscard|True|False|None)\\b"
+		}]
+	},
+	"attribute": {
+		"patterns": [{
+			"name": "variable",
+			"match": "\\b(LinkedSockets|Expand|SetBeam|SetTextColor|SetBackgroundColor|SetBorderColor|SetFontSize|SetAlertSound|BaseType|Class|Rarity|Prophecy|ItemLevel|DropLevel|Sockets|SocketGroup|Width|Height|StackSize|Quality|Corrupted|GemLevel|ShapedMap|ElderMap|Identified|HasExplicitMod|AnyEnchantment|HasEnchantment|ShaperItem|FracturedItem|SynthesisedItem|MinimapIcon|PlayEffect|ElderItem|CorruptedMods|DisableDropSound|MapTier|HasInfluence|AreaLevel|EnchantmentPassiveNode|AlternateQuality|Replica|GemQualityType)\\b"
+		}]
+	},
+	"strings": {
+		"name": "string",
+		"begin": "\"",
+		"end": "\"",
+		"patterns": [{
+			"name": "string",
+			"match": "\\\\"
+		}]
+	},
+	"comment-line": {
+		"name": "comment",
+		"begin": "#",
+		"end": "\n",
+		"patterns": [{
+			"name": "comment",
+			"match": "\\\\"
+		}]
+	}
+},
+	"scopeName": "source.filterspirit"
+}
